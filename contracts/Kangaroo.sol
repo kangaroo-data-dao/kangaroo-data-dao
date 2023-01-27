@@ -87,6 +87,7 @@ contract Kangaroo {
       targetSubmission.dealId = dealId;
       targetSubmission.pieceId = pieceCid;
       targetSubmission.spAddress = msg.sender;
+      targetSubmission.noVotes = RESET
     }
     submissions[url] = targetSubmission;
   }
