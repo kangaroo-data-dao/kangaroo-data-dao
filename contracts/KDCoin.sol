@@ -3,24 +3,28 @@ pragma solidity 0.8.17;
 
 interface IERC20 {
 
-
+    // Total Supply Cap
     function totalSupply() external view returns (uint256);
 
+    // Balance Of Holder
     function balanceOf(address account) external view returns (uint256);
 
+    // Set allowance
     function allowance(address owner, address spender) external view returns (uint256);
 
-
+    // Make Transfer
     function transfer(address recipient, uint256 amount) external returns (bool);
 
+    // Approve allowance
     function approve(address spender, uint256 amount) external returns (bool);
 
+    // Transfer From
     function transferFrom(address sender, address recipient, uint256 amount) external returns (bool);
 
-
-
+    // Event
     event Transfer(address indexed from, address indexed to, uint256 value);
 
+    // Event
     event Approval(address indexed owner, address indexed spender, uint256 value);
 
 }
