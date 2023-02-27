@@ -11,6 +11,7 @@ module.exports = {
     solidity: "0.8.17",
     defaultNetwork: "hyperspace",
     networks: {
+        // Also supports legacy wallaby
         hyperspace: {
             chainId: 3141,
             url: "https://api.hyperspace.node.glif.io/rpc/v1",
