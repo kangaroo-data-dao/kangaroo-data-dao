@@ -32,9 +32,9 @@ contract Kangaroo {
 
   address public owner;
 
-  constructor() {
-    owner = msg.sender;
-    stage = 0;
+  function initialize(address _owner) {
+    require(owner == address(0), "Kangaroo already initalized");
+    owner = _owner;
   }
 
   // Set the native token of the DAO
@@ -90,10 +90,6 @@ contract Kangaroo {
       targetSubmission.noVotes = RESET
     }
     submissions[url] = targetSubmission;
-  }
-
-  function voteStorageProvider() public {
-
   }
 }
 
