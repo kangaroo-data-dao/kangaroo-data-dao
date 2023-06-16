@@ -8,6 +8,8 @@ import Button from "./common/Button";
 import Header from "./common/Header";
 import { useRouter } from "next/router";
 
+
+// Run the App
 function App() {
   const {
     state: {},
